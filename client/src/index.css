@@ -1,0 +1,188 @@
+:root {
+  --ipasen-blue: #005eb8;
+  --ipasen-dark: #2c3e50;
+  --ipasen-light-bg: #f0f4f8;
+  --ipasen-white: #ffffff;
+  --ipasen-border: #e0e0e0;
+  --ipasen-gradient: linear-gradient(135deg, #005eb8 0%, #0077cc 100%);
+}
+
+body {
+  background: var(--ipasen-light-bg);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: var(--ipasen-gradient) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.5px;
+}
+
+/* Card Styling */
+.ipasen-card {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--ipasen-white);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.ipasen-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ipasen-card .card-header {
+  border-bottom: none;
+  font-weight: 600;
+}
+
+/* Stats Cards Animation */
+.ipasen-card h2 {
+  font-weight: 700;
+  animation: countUp 0.5s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Activity List Styling */
+.activity-list .ipasen-card {
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.ipasen-header {
+  border-left: 4px solid var(--ipasen-blue);
+  padding-left: 12px;
+  margin-bottom: 10px;
+}
+
+.ipasen-header h5 {
+  color: var(--ipasen-dark);
+  font-weight: 600;
+}
+
+.activity-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* List Group Hover */
+.list-group-item-action:hover {
+  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 6px 10px;
+}
+
+/* Alert Styling for News */
+.alert {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.alert-heading {
+  font-size: 0.95rem !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Loading Spinner */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Table Styling */
+table.ipasen-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table th {
+  background: var(--ipasen-light-bg);
+  font-weight: 600;
+  color: var(--ipasen-dark);
+}
+
+/* Button Styling */
+.btn-primary {
+  background: var(--ipasen-gradient);
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 94, 184, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--ipasen-blue);
+  border-color: var(--ipasen-blue);
+}
+
+.btn-outline-primary:hover {
+  background: var(--ipasen-gradient);
+  border-color: var(--ipasen-blue);
+}
+
+/* Footer Placeholder */
+.footer {
+  background: var(--ipasen-dark);
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
