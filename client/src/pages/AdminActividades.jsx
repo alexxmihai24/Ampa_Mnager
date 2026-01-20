@@ -19,7 +19,7 @@ function AdminActividades() {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            await axios.post('http://localhost:3000/api/activities', formData, {
+            await axios.post('/api/activities', formData, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setMessage({ text: 'Actividad creada con éxito', type: 'success' });

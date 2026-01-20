@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import mysql from 'mysql2/promise';
 
 dotenv.config();
 
@@ -25,10 +24,8 @@ app.get('/', (req, res) => {
   res.send('AMPA Manager API is running');
 });
 
-// Database Connection Test (Placeholder)
-// const db = await mysql.createConnection({...});
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+

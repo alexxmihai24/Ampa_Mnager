@@ -23,7 +23,7 @@ function Payments() {
 
         try {
             // Get History
-            const paymentsReq = await axios.get('http://localhost:3000/api/payments/my-payments', config);
+            const paymentsReq = await axios.get('/api/payments/my-payments', config);
             setPayments(paymentsReq.data);
 
             // Get Pending Activities (We need to filter activities user is enrolled in but not paid)
@@ -56,7 +56,7 @@ function Payments() {
 
         try {
             const token = localStorage.getItem('token');
-            await axios.post('http://localhost:3000/api/payments', {
+            await axios.post('/api/payments', {
                 enrollment_id: null, // We can find enrollment ID in backend or just link by context. 
                 // Actually, our backend expects enrollment_id. We need to fetch it or pass activity_id and let backend find it.
                 // For simplicity, let's send Concept and Amount directly, and backend links user.

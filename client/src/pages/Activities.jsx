@@ -60,7 +60,7 @@ function Activities() {
     const fetchActivities = async () => {
         try {
             const token = localStorage.getItem('token');
-            const { data } = await axios.get('http://localhost:3000/api/activities', {
+            const { data } = await axios.get('/api/activities', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             // If API returns data, merge with sample or replace
@@ -88,7 +88,7 @@ function Activities() {
             }
 
             const token = localStorage.getItem('token');
-            await axios.post(`http://localhost:3000/api/activities/${id}/enroll`, {}, {
+            await axios.post(`/api/activities/${id}/enroll`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setSuccess('¡Te has inscrito correctamente!');
